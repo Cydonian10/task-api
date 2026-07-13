@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { CreateUserSchema } from "@/src/features/user/dtos/create-user.dto";
+import { CreateUserSchema } from "@/src/features/user/dtos/create-user.dto.js";
 
 describe("CreateUserSchema", () => {
   describe("camino feliz", () => {

@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { CustomError } from "@/src/common/entities/custom-error";
+import { CustomError } from "@/src/common/entities/custom-error.js";
 
 describe("CustomError", () => {
   describe("constructor", () => {

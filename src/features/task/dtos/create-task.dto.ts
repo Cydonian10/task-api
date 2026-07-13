@@ -1,4 +1,4 @@
-import { TaskStatus } from "@/src/database/entities/task.entity";
+import { TaskStatus } from "@/src/database/entities/task.entity.js";
 import { z } from "zod";
 
 export const CreateTaskSchema = z.object({

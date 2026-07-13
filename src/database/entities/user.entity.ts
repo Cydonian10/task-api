@@ -1,6 +1,6 @@
 import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from "typeorm";
-import { ProjectEntity } from "./project.entity";
-import { CollaboratorEntity } from "./collaborator.entity";
+import { ProjectEntity } from "./project.entity.js";
+import { CollaboratorEntity } from "./collaborator.entity.js";
 
 @Entity("User")
 export class UserEntity {

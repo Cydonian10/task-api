@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { UserWithPassword } from "@/src/features/user/dtos/user-with-password.dto";
+import { UserWithPassword } from "@/src/features/user/dtos/user-with-password.dto.js";
 
 describe("UserWithPassword", () => {
   describe("fromEntity", () => {

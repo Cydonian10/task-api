@@ -5,7 +5,7 @@ import {
   ManyToOne,
   JoinColumn,
 } from "typeorm";
-import { CollaboratorEntity } from "./collaborator.entity";
+import { CollaboratorEntity } from "./collaborator.entity.js";
 
 export enum TaskStatus {
   PENDING = "PENDING",

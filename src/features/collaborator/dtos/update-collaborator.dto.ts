@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { CreateCollaboratorSchema } from "./create-collaborator.dto";
+import { CreateCollaboratorSchema } from "./create-collaborator.dto.js";
 
 export const UpdateCollaboratorSchema = CreateCollaboratorSchema.partial();
 

@@ -1,6 +1,6 @@
-import { JwtAdapter } from "@/src/common/adapters/jose/jwt-adapter";
+import { JwtAdapter } from "@/src/common/adapters/jose/jwt-adapter.js";
 import { Request, Response, NextFunction } from "express";
-import { UserService } from "../features/user/user.service";
+import { UserService } from "../features/user/user.service.js";
 
 export class AuthMiddleware {
   static isAuthenticated = async (

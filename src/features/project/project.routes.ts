@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { ProjectController } from "./project.controller";
-import { ProjectService } from "./project.service";
+import { ProjectController } from "./project.controller.js";
+import { ProjectService } from "./project.service.js";
 
 export class ProjectRouter {
   public static get routes(): Router {

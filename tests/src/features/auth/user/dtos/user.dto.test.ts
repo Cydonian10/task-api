@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from "vitest";
-import { UserDto } from "@/src/features/user/dtos/user.dto";
+import { UserDto } from "@/src/features/user/dtos/user.dto.js";
 
 vi.mock("luxon", () => {
   const fixedDate = { years: 30 };

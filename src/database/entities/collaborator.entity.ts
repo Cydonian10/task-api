@@ -7,9 +7,9 @@ import {
   JoinColumn,
   Unique,
 } from "typeorm";
-import { UserEntity } from "./user.entity";
-import { ProjectEntity } from "./project.entity";
-import { TaskEntity } from "./task.entity";
+import { UserEntity } from "./user.entity.js";
+import { ProjectEntity } from "./project.entity.js";
+import { TaskEntity } from "./task.entity.js";
 
 @Entity("Collaborator")
 @Unique("UQ_collaborator_user_project", ["userId", "projectId"])

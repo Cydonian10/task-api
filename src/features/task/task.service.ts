@@ -1,10 +1,10 @@
-import { AppDataSource } from "@/src/database/data-source";
-import { TaskEntity, TaskStatus } from "@/src/database/entities/task.entity";
-import { Result } from "@/src/common/entities/result";
-import { CreateTaskDTO } from "./dtos/create-task.dto";
-import { UpdateTaskDTO } from "./dtos/update-task.dto";
-import { TaskDto } from "./dtos/task.dto";
-import { notifyTaskCompleted } from "@/src/dashboard";
+import { AppDataSource } from "@/src/database/data-source.js";
+import { TaskEntity, TaskStatus } from "@/src/database/entities/task.entity.js";
+import { Result } from "@/src/common/entities/result.js";
+import { CreateTaskDTO } from "./dtos/create-task.dto.js";
+import { UpdateTaskDTO } from "./dtos/update-task.dto.js";
+import { TaskDto } from "./dtos/task.dto.js";
+import { notifyTaskCompleted } from "@/src/dashboard/index.js";
 
 export class TaskService {
   private readonly repo = AppDataSource.getRepository(TaskEntity);

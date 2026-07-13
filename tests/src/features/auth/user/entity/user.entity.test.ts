@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { User, Role } from "@/src/features/user/entity/user.entity";
+import { User, Role } from "@/src/features/user/entity/user.entity.js";
 
 describe("User (entidad de dominio)", () => {
   describe("constructor", () => {

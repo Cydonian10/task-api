@@ -1,10 +1,10 @@
 import "reflect-metadata";
 import { DataSource } from "typeorm";
-import { envs } from "@/src/config/envs";
-import { UserEntity } from "./entities/user.entity";
-import { ProjectEntity } from "./entities/project.entity";
-import { CollaboratorEntity } from "./entities/collaborator.entity";
-import { TaskEntity } from "./entities/task.entity";
+import { envs } from "@/src/config/envs.js";
+import { UserEntity } from "./entities/user.entity.js";
+import { ProjectEntity } from "./entities/project.entity.js";
+import { CollaboratorEntity } from "./entities/collaborator.entity.js";
+import { TaskEntity } from "./entities/task.entity.js";
 
 export const AppDataSource = new DataSource({
   type: "postgres",

@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { CreateTaskSchema } from "./create-task.dto";
+import { CreateTaskSchema } from "./create-task.dto.js";
 
 export const UpdateTaskSchema = CreateTaskSchema.partial();
 

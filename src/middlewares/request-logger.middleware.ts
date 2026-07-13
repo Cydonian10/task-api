@@ -1,10 +1,10 @@
 import { Request, Response, NextFunction } from "express";
-import logger from "../config/logger";
+import logger from "../config/logger.js";
 
 export const requestLogger = (
   req: Request,
   res: Response,
-  next: NextFunction
+  next: NextFunction,
 ) => {
   const start = Date.now();
   // Log de la petición entrante
@@ -17,7 +17,7 @@ export const requestLogger = (
       //   contentType: req.get("Content-Type"),
       //   contentLength: req.get("Content-Length"),
     },
-    `${req.method} ${req.url} - Request received`
+    `${req.method} ${req.url} - Request received`,
   );
 
   //Interceptar el final de la respuesta

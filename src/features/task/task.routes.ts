@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { TaskController } from "./task.controller";
-import { TaskService } from "./task.service";
+import { TaskController } from "./task.controller.js";
+import { TaskService } from "./task.service.js";
 
 export class TaskRouter {
   public static get routes(): Router {

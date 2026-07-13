@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
-import { AuthService } from "./auth.service";
-import { validateBody } from "@/src/utils/validation/requestValidation";
-import { LoginDtoSchema } from "./dtos/login-dto";
+import { AuthService } from "./auth.service.js";
+import { validateBody } from "@/src/utils/validation/requestValidation.js";
+import { LoginDtoSchema } from "./dtos/login-dto.js";
 
 export class AuthController {
   constructor(private authSrv: AuthService) {}

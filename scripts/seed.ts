@@ -1,11 +1,14 @@
 import "reflect-metadata";
 import { hashSync } from "bcrypt";
 import { faker } from "@faker-js/faker";
-import { AppDataSource } from "../src/database/data-source";
-import { UserEntity } from "../src/database/entities/user.entity";
-import { ProjectEntity } from "../src/database/entities/project.entity";
-import { CollaboratorEntity } from "../src/database/entities/collaborator.entity";
-import { TaskEntity, TaskStatus } from "../src/database/entities/task.entity";
+import { AppDataSource } from "../src/database/data-source.js";
+import { UserEntity } from "../src/database/entities/user.entity.js";
+import { ProjectEntity } from "../src/database/entities/project.entity.js";
+import { CollaboratorEntity } from "../src/database/entities/collaborator.entity.js";
+import {
+  TaskEntity,
+  TaskStatus,
+} from "../src/database/entities/task.entity.js";
 
 const PASSWORD = "password123";
 const TOTAL_USERS = 15;

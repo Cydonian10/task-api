@@ -1,15 +1,15 @@
-import { AppDataSource } from "@/src/database/data-source";
-import { UserEntity } from "@/src/database/entities/user.entity";
-import { Result } from "@/src/common/entities/result";
-import { ProjectEntity } from "@/src/database/entities/project.entity";
-import { CollaboratorEntity } from "@/src/database/entities/collaborator.entity";
-import { TaskEntity, TaskStatus } from "@/src/database/entities/task.entity";
+import { AppDataSource } from "@/src/database/data-source.js";
+import { UserEntity } from "@/src/database/entities/user.entity.js";
+import { Result } from "@/src/common/entities/result.js";
+import { ProjectEntity } from "@/src/database/entities/project.entity.js";
+import { CollaboratorEntity } from "@/src/database/entities/collaborator.entity.js";
+import { TaskEntity, TaskStatus } from "@/src/database/entities/task.entity.js";
 import {
   CollaborationEntry,
   CollaborationsResponse,
   OwnedProjectsResponse,
-} from "./dtos/profile-responses.dto";
-import { ProjectDto } from "../project/dtos/project.dto";
+} from "./dtos/profile-responses.dto.js";
+import { ProjectDto } from "../project/dtos/project.dto.js";
 import { In } from "typeorm";
 
 export class ProfileService {

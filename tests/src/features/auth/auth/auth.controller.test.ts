@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
-import { AuthController } from "@/src/features/auth/auth.controller";
-import { Result } from "@/src/common/entities/result";
+import { AuthController } from "@/src/features/auth/auth.controller.js";
+import { Result } from "@/src/common/entities/result.js";
 
 const crearMockReq = (overrides: any = {}) => ({
   body: {},

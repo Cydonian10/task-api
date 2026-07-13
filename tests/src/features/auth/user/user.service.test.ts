@@ -29,8 +29,8 @@ vi.mock("@/src/features/auth/user/dtos/user.dto", () => ({
   },
 }));
 
-import { UserService } from "@/src/features/user/user.service";
-import { CreateUserDTO } from "@/src/features/user/dtos/create-user.dto";
+import { UserService } from "@/src/features/user/user.service.js";
+import { CreateUserDTO } from "@/src/features/user/dtos/create-user.dto.js";
 
 describe("UserService", () => {
   let service: UserService;

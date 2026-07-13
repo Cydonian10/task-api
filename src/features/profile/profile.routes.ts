@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { ProfileController } from "./profile.controller";
-import { ProfileService } from "./profile.service";
+import { ProfileController } from "./profile.controller.js";
+import { ProfileService } from "./profile.service.js";
 
 export class ProfileRouter {
   public static get routes(): Router {

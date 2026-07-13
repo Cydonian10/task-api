@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { Result } from "@/src/common/entities/result";
+import { Result } from "@/src/common/entities/result.js";
 
 describe("Result", () => {
   describe("success", () => {

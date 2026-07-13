@@ -1,8 +1,8 @@
-import { AppDataSource } from "@/src/database/data-source";
-import { CollaboratorEntity } from "@/src/database/entities/collaborator.entity";
-import { Result } from "@/src/common/entities/result";
-import { CreateCollaboratorDTO } from "./dtos/create-collaborator.dto";
-import { CollaboratorDto } from "./dtos/collaborator.dto";
+import { AppDataSource } from "@/src/database/data-source.js";
+import { CollaboratorEntity } from "@/src/database/entities/collaborator.entity.js";
+import { Result } from "@/src/common/entities/result.js";
+import { CreateCollaboratorDTO } from "./dtos/create-collaborator.dto.js";
+import { CollaboratorDto } from "./dtos/collaborator.dto.js";
 
 export class CollaboratorService {
   private readonly repo = AppDataSource.getRepository(CollaboratorEntity);

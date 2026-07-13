@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { LoginDtoSchema } from "@/src/features/auth/dtos/login-dto";
+import { LoginDtoSchema } from "@/src/features/auth/dtos/login-dto.js";
 
 describe("LoginDtoSchema", () => {
   describe("camino feliz", () => {

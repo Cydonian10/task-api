@@ -1,10 +1,10 @@
-import { LoginDto } from "./dtos/login-dto";
-import { Result } from "@/src/common/entities/result";
-import { BcryptAdapter } from "@/src/common/adapters/bcrypt/bcrypt-adapter";
-import { JwtAdapter } from "@/src/common/adapters/jose/jwt-adapter";
-import { Payload } from "@/src/common/entities/payload";
-import { AppDataSource } from "@/src/database/data-source";
-import { UserEntity } from "@/src/database/entities/user.entity";
+import { LoginDto } from "./dtos/login-dto.js";
+import { Result } from "@/src/common/entities/result.js";
+import { BcryptAdapter } from "@/src/common/adapters/bcrypt/bcrypt-adapter.js";
+import { JwtAdapter } from "@/src/common/adapters/jose/jwt-adapter.js";
+import { Payload } from "@/src/common/entities/payload.js";
+import { AppDataSource } from "@/src/database/data-source.js";
+import { UserEntity } from "@/src/database/entities/user.entity.js";
 
 export class AuthService {
   private readonly repo = AppDataSource.getRepository(UserEntity);

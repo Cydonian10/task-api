@@ -1,5 +1,9 @@
 import { describe, it, expect, vi } from "vitest";
-import { validateBody, validateParam, validateQuery } from "@/src/utils/validation/requestValidation";
+import {
+  validateBody,
+  validateParam,
+  validateQuery,
+} from "@/src/utils/validation/requestValidation.js";
 import { z } from "zod";
 
 const crearMockRes = () => {
@@ -24,7 +28,10 @@ describe("requestValidation", () => {
 
       const result = validateBody(req, res, TestSchema);
 
-      expect(result).toEqual({ success: true, data: { nombre: "Juan", edad: 25 } });
+      expect(result).toEqual({
+        success: true,
+        data: { nombre: "Juan", edad: 25 },
+      });
       expect(res.status).not.toHaveBeenCalled();
     });
 
@@ -37,7 +44,7 @@ describe("requestValidation", () => {
       expect(result).toEqual({ success: false });
       expect(res.status).toHaveBeenCalledWith(400);
       expect(res.json).toHaveBeenCalledWith(
-        expect.objectContaining({ error: "Invalid request data" })
+        expect.objectContaining({ error: "Invalid request data" }),
       );
     });
   });
@@ -70,7 +77,10 @@ describe("requestValidation", () => {
 
       const result = validateQuery(req, res, TestSchema);
 
-      expect(result).toEqual({ success: true, data: { nombre: "María", edad: 30 } });
+      expect(result).toEqual({
+        success: true,
+        data: { nombre: "María", edad: 30 },
+      });
     });
 
     it("debería retornar fallo con query inválido", () => {

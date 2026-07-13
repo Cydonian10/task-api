@@ -1,5 +1,5 @@
-import { CollaboratorEntity } from "@/src/database/entities/collaborator.entity";
-import { TaskEntity } from "@/src/database/entities/task.entity";
+import { CollaboratorEntity } from "@/src/database/entities/collaborator.entity.js";
+import { TaskEntity } from "@/src/database/entities/task.entity.js";
 
 export class CollaboratorDto {
   constructor(

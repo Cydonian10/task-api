@@ -1,4 +1,4 @@
-import { TaskEntity } from "@/src/database/entities/task.entity";
+import { TaskEntity } from "@/src/database/entities/task.entity.js";
 
 export class TaskDto {
   constructor(

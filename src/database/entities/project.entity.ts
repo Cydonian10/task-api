@@ -6,8 +6,8 @@ import {
   OneToMany,
   JoinColumn,
 } from "typeorm";
-import { UserEntity } from "./user.entity";
-import { CollaboratorEntity } from "./collaborator.entity";
+import { UserEntity } from "./user.entity.js";
+import { CollaboratorEntity } from "./collaborator.entity.js";
 
 @Entity("Project")
 export class ProjectEntity {

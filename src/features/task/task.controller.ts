@@ -1,8 +1,8 @@
 import { Request, Response } from "express";
-import { validateBody } from "@/src/utils/validation/requestValidation";
-import { CreateTaskSchema } from "./dtos/create-task.dto";
-import { UpdateTaskSchema } from "./dtos/update-task.dto";
-import { TaskService } from "./task.service";
+import { validateBody } from "@/src/utils/validation/requestValidation.js";
+import { CreateTaskSchema } from "./dtos/create-task.dto.js";
+import { UpdateTaskSchema } from "./dtos/update-task.dto.js";
+import { TaskService } from "./task.service.js";
 
 export class TaskController {
   constructor(private readonly taskService: TaskService) {}

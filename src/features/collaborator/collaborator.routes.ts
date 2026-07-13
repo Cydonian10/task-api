@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { CollaboratorController } from "./collaborator.controller";
-import { CollaboratorService } from "./collaborator.service";
+import { CollaboratorController } from "./collaborator.controller.js";
+import { CollaboratorService } from "./collaborator.service.js";
 
 export class CollaboratorRouter {
   public static get routes(): Router {

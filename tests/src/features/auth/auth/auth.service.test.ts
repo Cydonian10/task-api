@@ -20,9 +20,9 @@ vi.mock("@/src/common/adapters/jose/jwt-adapter", () => ({
   JwtAdapter: { generateToken: vi.fn() },
 }));
 
-import { AuthService } from "@/src/features/auth/auth.service";
-import { BcryptAdapter } from "@/src/common/adapters/bcrypt/bcrypt-adapter";
-import { JwtAdapter } from "@/src/common/adapters/jose/jwt-adapter";
+import { AuthService } from "@/src/features/auth/auth.service.js";
+import { BcryptAdapter } from "@/src/common/adapters/bcrypt/bcrypt-adapter.js";
+import { JwtAdapter } from "@/src/common/adapters/jose/jwt-adapter.js";
 
 describe("AuthService", () => {
   let service: AuthService;

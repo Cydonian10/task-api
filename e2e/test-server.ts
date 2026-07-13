@@ -1,9 +1,9 @@
 import "reflect-metadata";
-import { AppRoutes } from "@/src/routes";
-import { ServerApp } from "@/src/server";
-import { AppDataSource } from "@/src/database/data-source";
+import { AppRoutes } from "@/src/routes.js";
+import { ServerApp } from "@/src/server.js";
+import { AppDataSource } from "@/src/database/data-source.js";
 import pg from "pg";
-import { envs } from "@/src/config/envs";
+import { envs } from "@/src/config/envs.js";
 
 export const testServer = new ServerApp({
   port: 3000,

@@ -1,7 +1,7 @@
 import { Router } from "express";
-import { AuthService } from "./auth.service";
-import { AuthController } from "./auth.controller";
-import { AuthMiddleware } from "@/src/middlewares/auth.middlware";
+import { AuthService } from "./auth.service.js";
+import { AuthController } from "./auth.controller.js";
+import { AuthMiddleware } from "@/src/middlewares/auth.middlware.js";
 
 export class AuthRouter {
   public static get routes(): Router {

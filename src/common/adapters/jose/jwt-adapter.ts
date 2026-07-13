@@ -1,6 +1,6 @@
 import { SignJWT, jwtVerify } from "jose";
-import { Payload } from "../../entities/payload";
-import { envs } from "@/src/config/envs";
+import { Payload } from "../../entities/payload.js";
+import { envs } from "@/src/config/envs.js";
 
 export class JwtAdapter {
   private static getSecret() {

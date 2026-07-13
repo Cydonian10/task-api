@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { NumberSchema } from "@/src/common/validations/number-schema";
+import { NumberSchema } from "@/src/common/validations/number-schema.js";
 
 describe("NumberSchema", () => {
   describe("camino feliz", () => {

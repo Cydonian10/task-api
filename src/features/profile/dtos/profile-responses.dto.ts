@@ -1,4 +1,4 @@
-import { ProjectDto } from "@/src/features/project/dtos/project.dto";
+import { ProjectDto } from "@/src/features/project/dtos/project.dto.js";
 
 export class OwnedProjectsResponse {
   constructor(

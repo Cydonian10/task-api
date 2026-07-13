@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { JwtAdapter } from "./jwt-adapter";
+import { JwtAdapter } from "./jwt-adapter.js";
 
 describe("JwtAdapter", () => {
   const payload = { email: "test@example.com" };

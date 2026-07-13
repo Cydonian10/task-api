@@ -1,10 +1,10 @@
 import "reflect-metadata";
-import { ServerApp } from "./server";
-import { AppRoutes } from "./routes";
-import { AppDataSource } from "./database/data-source";
-import { setupDashboard } from "./dashboard";
+import { ServerApp } from "./server.js";
+import { AppRoutes } from "./routes.js";
+import { AppDataSource } from "./database/data-source.js";
+import { setupDashboard } from "./dashboard/index.js";
 import dotenv from "dotenv";
-import logger from "./config/logger";
+import logger from "./config/logger.js";
 
 dotenv.config();
 

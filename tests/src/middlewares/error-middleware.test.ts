@@ -3,8 +3,8 @@ import {
   errorHandler,
   customHandlerError,
   logsErrors,
-} from "@/src/middlewares/error.middlware";
-import { CustomError } from "@/src/common/entities/custom-error";
+} from "@/src/middlewares/error.middlware.js";
+import { CustomError } from "@/src/common/entities/custom-error.js";
 
 vi.mock("@/src/config/logger", () => ({
   default: { error: vi.fn(), warn: vi.fn() },

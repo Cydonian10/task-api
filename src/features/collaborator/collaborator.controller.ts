@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
-import { validateBody } from "@/src/utils/validation/requestValidation";
-import { CreateCollaboratorSchema } from "./dtos/create-collaborator.dto";
-import { CollaboratorService } from "./collaborator.service";
+import { validateBody } from "@/src/utils/validation/requestValidation.js";
+import { CreateCollaboratorSchema } from "./dtos/create-collaborator.dto.js";
+import { CollaboratorService } from "./collaborator.service.js";
 
 export class CollaboratorController {
   constructor(private readonly collaboratorService: CollaboratorService) {}

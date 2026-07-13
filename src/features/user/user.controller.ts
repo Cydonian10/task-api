@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
-import { validateBody } from "@/src/utils/validation/requestValidation";
-import { CreateUserSchema } from "./dtos/create-user.dto";
-import { UserService } from "./user.service";
+import { validateBody } from "@/src/utils/validation/requestValidation.js";
+import { CreateUserSchema } from "./dtos/create-user.dto.js";
+import { UserService } from "./user.service.js";
 
 export class UserController {
   constructor(private readonly userService: UserService) {}

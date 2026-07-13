@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { UserController } from "./user.controller";
-import { UserService } from "./user.service";
+import { UserController } from "./user.controller.js";
+import { UserService } from "./user.service.js";
 
 export class UserRouter {
   public static get routes(): Router {

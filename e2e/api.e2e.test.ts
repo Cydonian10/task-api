@@ -1,5 +1,5 @@
 import request from "supertest";
-import { testServer, initTestDb, closeTestDb } from "./test-server";
+import { testServer, initTestDb, closeTestDb } from "./test-server.js";
 import { describe, it, expect, beforeAll, afterAll } from "vitest";
 
 beforeAll(async () => {

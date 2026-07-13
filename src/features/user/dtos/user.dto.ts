@@ -1,4 +1,4 @@
-import { UserEntity } from "@/src/database/entities/user.entity";
+import { UserEntity } from "@/src/database/entities/user.entity.js";
 import { DateTime } from "luxon";
 
 export class UserDto {

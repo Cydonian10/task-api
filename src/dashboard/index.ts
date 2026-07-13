@@ -1,7 +1,7 @@
 import { Server as SocketIOServer } from "socket.io";
 import type http from "node:http";
-import { JwtAdapter } from "@/src/common/adapters/jose/jwt-adapter";
-import { UserService } from "@/src/features/user/user.service";
+import { JwtAdapter } from "@/src/common/adapters/jose/jwt-adapter.js";
+import { UserService } from "@/src/features/user/user.service.js";
 
 let io: SocketIOServer;
 

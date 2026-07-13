@@ -1,12 +1,12 @@
 import { NextFunction, Request, Response } from "express";
-import { CustomError } from "../common/entities/custom-error";
-import logger from "../config/logger";
+import { CustomError } from "../common/entities/custom-error.js";
+import logger from "../config/logger.js";
 
 export const logsErrors = (
   error: any,
   req: Request,
   _res: Response,
-  next: NextFunction
+  next: NextFunction,
 ) => {
   logger.error(
     {
@@ -17,7 +17,7 @@ export const logsErrors = (
       // userAgent: req.get("User-Agent"),
       // ip: req.ip,
     },
-    `Error capturado en ${req.method} ${req.url}`
+    `Error capturado en ${req.method} ${req.url}`,
   );
   next(error);
 };
@@ -26,7 +26,7 @@ export const errorHandler = (
   error: any,
   _req: Request,
   res: Response,
-  _next: NextFunction
+  _next: NextFunction,
 ) => {
   res.status(500).json({ message: `Internal server error ${error.message}` });
 };
@@ -35,7 +35,7 @@ export const customHandlerError = (
   error: any,
   req: Request,
   res: Response,
-  next: NextFunction
+  next: NextFunction,
 ) => {
   if (error instanceof CustomError) {
     logger.warn(
@@ -46,7 +46,7 @@ export const customHandlerError = (
         method: req.method,
         url: req.url,
       },
-      `Custom error: ${error.message}`
+      `Custom error: ${error.message}`,
     );
 
     return res.status(error.statusCode).json({

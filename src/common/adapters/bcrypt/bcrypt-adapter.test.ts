@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { BcryptAdapter } from "./bcrypt-adapter";
+import { BcryptAdapter } from "./bcrypt-adapter.js";
 
 describe("BcryptAdapter", () => {
   it("should hash a password and return a string", () => {

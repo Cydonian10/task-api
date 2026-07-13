@@ -4,9 +4,9 @@ import {
   customHandlerError,
   errorHandler,
   logsErrors,
-} from "./middlewares/error.middlware";
-import { requestLogger } from "./middlewares/request-logger.middleware";
-import logger from "./config/logger";
+} from "./middlewares/error.middlware.js";
+import { requestLogger } from "./middlewares/request-logger.middleware.js";
+import logger from "./config/logger.js";
 import cors from "cors";
 
 interface Options {

@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
-import { validateBody } from "@/src/utils/validation/requestValidation";
-import { CreateProjectSchema } from "./dtos/create-project.dto";
-import { ProjectService } from "./project.service";
+import { validateBody } from "@/src/utils/validation/requestValidation.js";
+import { CreateProjectSchema } from "./dtos/create-project.dto.js";
+import { ProjectService } from "./project.service.js";
 
 export class ProjectController {
   constructor(private readonly projectService: ProjectService) {}

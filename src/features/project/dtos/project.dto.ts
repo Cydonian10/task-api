@@ -1,4 +1,4 @@
-import { ProjectEntity } from "@/src/database/entities/project.entity";
+import { ProjectEntity } from "@/src/database/entities/project.entity.js";
 
 export class ProjectDto {
   constructor(

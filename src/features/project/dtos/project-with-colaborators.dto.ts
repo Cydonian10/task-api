@@ -1,5 +1,5 @@
-import { ProjectEntity } from "@/src/database/entities/project.entity";
-import { ProjectDto } from "./project.dto";
+import { ProjectEntity } from "@/src/database/entities/project.entity.js";
+import { ProjectDto } from "./project.dto.js";
 
 export class CollaboratorInfoDto {
   constructor(

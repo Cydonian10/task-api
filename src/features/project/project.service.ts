@@ -1,13 +1,13 @@
-import { AppDataSource } from "@/src/database/data-source";
-import { ProjectEntity } from "@/src/database/entities/project.entity";
-import { UserEntity } from "@/src/database/entities/user.entity";
-import { CollaboratorEntity } from "@/src/database/entities/collaborator.entity";
-import { Result } from "@/src/common/entities/result";
-import { CreateProjectDTO } from "./dtos/create-project.dto";
-import { UpdateProjectDTO } from "./dtos/update-project.dto";
-import { ProjectDto } from "./dtos/project.dto";
+import { AppDataSource } from "@/src/database/data-source.js";
+import { ProjectEntity } from "@/src/database/entities/project.entity.js";
+import { UserEntity } from "@/src/database/entities/user.entity.js";
+import { CollaboratorEntity } from "@/src/database/entities/collaborator.entity.js";
+import { Result } from "@/src/common/entities/result.js";
+import { CreateProjectDTO } from "./dtos/create-project.dto.js";
+import { UpdateProjectDTO } from "./dtos/update-project.dto.js";
+import { ProjectDto } from "./dtos/project.dto.js";
 import { In } from "typeorm";
-import { ProjectWithCollaboratorsDto } from "./dtos/project-with-colaborators.dto";
+import { ProjectWithCollaboratorsDto } from "./dtos/project-with-colaborators.dto.js";
 
 export class ProjectService {
   private readonly repo = AppDataSource.getRepository(ProjectEntity);

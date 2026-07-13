@@ -1,13 +1,13 @@
-import { AppDataSource } from "@/src/database/data-source";
-import { UserEntity } from "@/src/database/entities/user.entity";
-import { Result } from "@/src/common/entities/result";
-import { User } from "./entity/user.entity";
-import { CreateUserDTO } from "./dtos/create-user.dto";
-import { BcryptAdapter } from "@/src/common/adapters/bcrypt/bcrypt-adapter";
-import { UserDto } from "./dtos/user.dto";
-import { UpdateUserDTO } from "./dtos/update-user.dto";
-import { TaskDto } from "../task/dtos/task.dto";
-import { TaskEntity } from "@/src/database/entities/task.entity";
+import { AppDataSource } from "@/src/database/data-source.js";
+import { UserEntity } from "@/src/database/entities/user.entity.js";
+import { Result } from "@/src/common/entities/result.js";
+import { User } from "./entity/user.entity.js";
+import { CreateUserDTO } from "./dtos/create-user.dto.js";
+import { BcryptAdapter } from "@/src/common/adapters/bcrypt/bcrypt-adapter.js";
+import { UserDto } from "./dtos/user.dto.js";
+import { UpdateUserDTO } from "./dtos/update-user.dto.js";
+import { TaskDto } from "../task/dtos/task.dto.js";
+import { TaskEntity } from "@/src/database/entities/task.entity.js";
 
 export class UserService {
   private readonly repo = AppDataSource.getRepository(UserEntity);
