@@ -1,4 +1,4 @@
-import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column, OneToMany, Relation } from "typeorm";
 import { ProjectEntity } from "./project.entity.js";
 import { CollaboratorEntity } from "./collaborator.entity.js";
 
@@ -23,8 +23,8 @@ export class UserEntity {
   dateOfBirth!: Date;
 
   @OneToMany(() => ProjectEntity, (project) => project.owner)
-  projects!: ProjectEntity[];
+  projects!: Relation<ProjectEntity[]>;
 
   @OneToMany(() => CollaboratorEntity, (collaborator) => collaborator.user)
-  collaborators!: CollaboratorEntity[];
+  collaborators!: Relation<CollaboratorEntity[]>;
 }

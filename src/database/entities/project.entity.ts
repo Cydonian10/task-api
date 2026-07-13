@@ -5,6 +5,7 @@ import {
   ManyToOne,
   OneToMany,
   JoinColumn,
+  Relation,
 } from "typeorm";
 import { UserEntity } from "./user.entity.js";
 import { CollaboratorEntity } from "./collaborator.entity.js";
@@ -31,8 +32,8 @@ export class ProjectEntity {
 
   @ManyToOne(() => UserEntity, (user) => user.projects, { onDelete: "CASCADE" })
   @JoinColumn({ name: "owner_id" })
-  owner!: UserEntity;
+  owner!: Relation<UserEntity>;
 
   @OneToMany(() => CollaboratorEntity, (collaborator) => collaborator.project)
-  collaborators!: CollaboratorEntity[];
+  collaborators!: Relation<CollaboratorEntity[]>;
 }

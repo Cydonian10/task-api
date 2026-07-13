@@ -4,6 +4,7 @@ import {
   Column,
   ManyToOne,
   JoinColumn,
+  Relation,
 } from "typeorm";
 import { CollaboratorEntity } from "./collaborator.entity.js";
 
@@ -44,5 +45,5 @@ export class TaskEntity {
     onDelete: "CASCADE",
   })
   @JoinColumn({ name: "collaborator_id" })
-  collaborator!: CollaboratorEntity;
+  collaborator!: Relation<CollaboratorEntity>;
 }
