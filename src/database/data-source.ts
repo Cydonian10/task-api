@@ -15,5 +15,6 @@ export const AppDataSource = new DataSource({
   database: envs.POSTGRES_DB_NAME,
   entities: [UserEntity, ProjectEntity, CollaboratorEntity, TaskEntity],
   dropSchema: false,
-  synchronize: envs.NODE_ENV !== "production",
+  synchronize: true,
+  ssl: envs.NODE_ENV === "production" ? { rejectUnauthorized: false } : false,
 });
