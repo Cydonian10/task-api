@@ -8,14 +8,14 @@ describe("CreateUserSchema", () => {
         name: "Juan Pérez",
         email: "juan@test.com",
         password: "123456",
-        roles: ["USER"],
+        roles: ["user"],
         dateOfBirth: "1990-01-15",
       });
 
       expect(result.success).toBe(true);
       if (result.success) {
         expect(result.data.name).toBe("Juan Pérez");
-        expect(result.data.roles).toEqual(["USER"]);
+        expect(result.data.roles).toEqual(["user"]);
         expect(result.data.dateOfBirth).toBeInstanceOf(Date);
       }
     });
@@ -25,7 +25,7 @@ describe("CreateUserSchema", () => {
         name: "Admin",
         email: "admin@test.com",
         password: "123456",
-        roles: ["ADMIN", "USER"],
+        roles: ["admin", "user"],
         dateOfBirth: "2000-12-31",
       });
 
@@ -39,7 +39,7 @@ describe("CreateUserSchema", () => {
         name: "Ab",
         email: "a@test.com",
         password: "123456",
-        roles: ["USER"],
+        roles: ["user"],
         dateOfBirth: "1990-01-01",
       });
 
@@ -51,7 +51,7 @@ describe("CreateUserSchema", () => {
         name: "Test User",
         email: "test@test.com",
         password: "123",
-        roles: ["USER"],
+        roles: ["user"],
         dateOfBirth: "1990-01-01",
       });
 
@@ -63,7 +63,7 @@ describe("CreateUserSchema", () => {
         name: "Test User",
         email: "test@test.com",
         password: "123456",
-        roles: ["SUPERADMIN"],
+        roles: ["superadmin"],
         dateOfBirth: "1990-01-01",
       });
 
@@ -74,7 +74,7 @@ describe("CreateUserSchema", () => {
       expect(pathError).toBeDefined();
       expect(pathError?.path).toContain("roles");
       expect(pathError?.message).toContain(
-        'Invalid option: expected one of "ADMIN"|"USER"',
+        'Invalid option: expected one of "admin"|"user"',
       );
       expect(result.success).toBe(false);
     });

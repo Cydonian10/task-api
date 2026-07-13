@@ -8,7 +8,7 @@ describe("UpdateUserSchema", () => {
         name: "Nuevo Nombre",
         email: "nuevo@test.com",
         password: "nueva123",
-        roles: ["USER"],
+        roles: ["user"],
         dateOfBirth: "1995-05-20",
       });
 

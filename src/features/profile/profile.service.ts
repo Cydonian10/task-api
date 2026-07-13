@@ -3,7 +3,7 @@ import { UserEntity } from "@/src/database/entities/user.entity";
 import { Result } from "@/src/common/entities/result";
 import { ProjectEntity } from "@/src/database/entities/project.entity";
 import { CollaboratorEntity } from "@/src/database/entities/collaborator.entity";
-import { TaskEntity } from "@/src/database/entities/task.entity";
+import { TaskEntity, TaskStatus } from "@/src/database/entities/task.entity";
 import {
   CollaborationEntry,
   CollaborationsResponse,
@@ -80,7 +80,7 @@ export class ProfileService {
         tasksByCollaborator[task.collaboratorId] = { total: 0, completed: 0 };
       }
       tasksByCollaborator[task.collaboratorId].total += 1;
-      if (task.status === "completed") {
+      if (task.status === TaskStatus.COMPLETED) {
         tasksByCollaborator[task.collaboratorId].completed += 1;
       }
     }

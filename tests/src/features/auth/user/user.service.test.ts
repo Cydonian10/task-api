@@ -30,6 +30,7 @@ vi.mock("@/src/features/auth/user/dtos/user.dto", () => ({
 }));
 
 import { UserService } from "@/src/features/user/user.service";
+import { CreateUserDTO } from "@/src/features/user/dtos/create-user.dto";
 
 describe("UserService", () => {
   let service: UserService;
@@ -41,11 +42,11 @@ describe("UserService", () => {
 
   describe("createUser", () => {
     it("debería crear un usuario exitosamente", async () => {
-      const dto = {
+      const dto: CreateUserDTO = {
         name: "Juan",
         email: "juan@test.com",
         password: "123456",
-        roles: ["USER" as const],
+        roles: ["user"],
         dateOfBirth: new Date("1990-01-15"),
       };
       const savedUser = { id: 1, ...dto, passwordHash: "hashedPassword" };
@@ -68,14 +69,14 @@ describe("UserService", () => {
           id: 1,
           name: "Juan",
           email: "juan@test.com",
-          roles: ["USER"],
+          roles: ["user"],
           dateOfBirth: new Date(),
         },
         {
           id: 2,
           name: "María",
           email: "maria@test.com",
-          roles: ["ADMIN"],
+          roles: ["admin"],
           dateOfBirth: new Date(),
         },
       ];

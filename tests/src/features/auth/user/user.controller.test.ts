@@ -45,7 +45,7 @@ describe("UserController", () => {
         name: "Juan Pérez",
         email: "juan@test.com",
         password: "123456",
-        roles: ["USER"],
+        roles: ["user"],
         dateOfBirth: "1990-01-15",
       };
       const req = crearMockReq({ body: dto });
